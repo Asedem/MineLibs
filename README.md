@@ -19,7 +19,7 @@
 <dependency>
     <groupId>com.github.Asedem</groupId>
     <artifactId>MineLibs</artifactId>
-    <version>Tag</version>
+    <version>fc5dda2dae</version>
 </dependency>
 ```
 
