@@ -1,5 +1,6 @@
 package de.asedem.minelibs.core;
 
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
@@ -8,6 +9,8 @@ import org.jetbrains.annotations.Nullable;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AdvancedConfig extends YamlConfiguration {
 
@@ -137,8 +140,153 @@ public class AdvancedConfig extends YamlConfiguration {
      * @return the file for the configuration to be saved in.
      */
     @NotNull
-    public File getFile() {
+    public File file() {
         return file;
+    }
+
+    /**
+     * Get a String-Object Map from the config
+     *
+     * @param path The path where the object is in
+     * @return The Map object
+     */
+    @Nullable
+    public Map<String, Object> getMap(@NotNull String path) {
+        final Map<String, Object> map = new HashMap<>();
+        final ConfigurationSection configurationSection = this.getConfigurationSection(path);
+        if (configurationSection == null) return null;
+        configurationSection.getKeys(false)
+                .forEach(key -> map.put(key, this.get(key)));
+        return map;
+    }
+
+    /**
+     * Get a String-Object Map from the config
+     *
+     * @param path The path where the object is in
+     * @param def The return value if the object don't exist
+     * @return The Map object
+     */
+    @NotNull
+    public Map<String, Object> getMap(@NotNull String path, @NotNull Map<String, Object> def) {
+        final Map<String, Object> map = getMap(path);
+        return map == null ? def : map;
+    }
+
+    /**
+     * Get a String-String Map from the config
+     *
+     * @param path The path where the object is in
+     * @return The Map object
+     */
+    @Nullable
+    public Map<String, String> getStringMap(@NotNull String path) {
+        final Map<String, String> map = new HashMap<>();
+        final ConfigurationSection configurationSection = this.getConfigurationSection(path);
+        if (configurationSection == null) return null;
+        configurationSection.getKeys(false)
+                .forEach(key -> map.put(key, this.getString(key)));
+        return map;
+    }
+
+    /**
+     * Get a String-String Map from the config
+     *
+     * @param path The path where the object is in
+     * @param def The return value if the object don't exist
+     * @return The Map object
+     */
+    @NotNull
+    public Map<String, String> getStringMap(@NotNull String path, @NotNull Map<String, String> def) {
+        final Map<String, String> map = getStringMap(path);
+        return map == null ? def : map;
+    }
+
+    /**
+     * Get a String-Integer Map from the config
+     *
+     * @param path The path where the object is in
+     * @return The Map object
+     */
+    @Nullable
+    public Map<String, Integer> getIntMap(@NotNull String path) {
+        final Map<String, Integer> map = new HashMap<>();
+        final ConfigurationSection configurationSection = this.getConfigurationSection(path);
+        if (configurationSection == null) return null;
+        configurationSection.getKeys(false)
+                .forEach(key -> map.put(key, this.getInt(key)));
+        return map;
+    }
+
+    /**
+     * Get a String-Integer Map from the config
+     *
+     * @param path The path where the object is in
+     * @param def The return value if the object don't exist
+     * @return The Map object
+     */
+    @NotNull
+    public Map<String, Integer> getIntMap(@NotNull String path, @NotNull Map<String, Integer> def) {
+        final Map<String, Integer> map = getIntMap(path);
+        return map == null ? def : map;
+    }
+
+    /**
+     * Get a String-Boolean Map from the config
+     *
+     * @param path The path where the object is in
+     * @return The Map object
+     */
+    @Nullable
+    public Map<String, Boolean> getBooleanMap(@NotNull String path) {
+        final Map<String, Boolean> map = new HashMap<>();
+        final ConfigurationSection configurationSection = this.getConfigurationSection(path);
+        if (configurationSection == null) return null;
+        configurationSection.getKeys(false)
+                .forEach(key -> map.put(key, this.getBoolean(key)));
+        return map;
+    }
+
+    /**
+     * Get a String-Boolean Map from the config
+     *
+     * @param path The path where the object is in
+     * @param def The return value if the object don't exist
+     * @return The Map object
+     */
+    @NotNull
+    public Map<String, Boolean> getBooleanMap(@NotNull String path, @NotNull Map<String, Boolean> def) {
+        final Map<String, Boolean> map = getBooleanMap(path);
+        return map == null ? def : map;
+    }
+
+    /**
+     * Get a String-Double Map from the config
+     *
+     * @param path The path where the object is in
+     * @return The Map object
+     */
+    @Nullable
+    public Map<String, Double> getDoubleMap(@NotNull String path) {
+        final Map<String, Double> map = new HashMap<>();
+        final ConfigurationSection configurationSection = this.getConfigurationSection(path);
+        if (configurationSection == null) return null;
+        configurationSection.getKeys(false)
+                .forEach(key -> map.put(key, this.getDouble(key)));
+        return map;
+    }
+
+    /**
+     * Get a String-Double Map from the config
+     *
+     * @param path The path where the object is in
+     * @param def The return value if the object don't exist
+     * @return The Map object
+     */
+    @NotNull
+    public Map<String, Double> getDoubleMap(@NotNull String path, @NotNull Map<String, Double> def) {
+        final Map<String, Double> map = getDoubleMap(path);
+        return map == null ? def : map;
     }
 
     /**
