@@ -1,7 +1,10 @@
 package de.asedem.minelibs.core;
 
 import net.md_5.bungee.api.chat.*;
-import org.bukkit.entity.Player;
+import net.md_5.bungee.api.chat.hover.content.Entity;
+import net.md_5.bungee.api.chat.hover.content.Item;
+import net.md_5.bungee.api.chat.hover.content.Text;
+import org.bukkit.entity.HumanEntity;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -27,8 +30,8 @@ public class TextComponentBuilder {
         return currentBuilding;
     }
 
-    public void showToPlayer(Player player) {
-        player.spigot().sendMessage(currentBuilding);
+    public void showToHumanEntity(HumanEntity humanEntity) {
+        humanEntity.spigot().sendMessage(currentBuilding);
     }
 
     @NotNull
@@ -44,26 +47,26 @@ public class TextComponentBuilder {
     }
 
     @NotNull
-    public TextComponentBuilder setHoverEvent(@NotNull HoverEvent.Action action, @NotNull BaseComponent[] value) {
-        currentBuilding.setHoverEvent(new HoverEvent(action, value));
+    public TextComponentBuilder setHoverEventText(@NotNull BaseComponent[] value) {
+        currentBuilding.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(value)));
         return this;
     }
 
     @NotNull
-    public TextComponentBuilder setHoverEvent(@NotNull HoverEvent.Action action, @NotNull String value) {
-        currentBuilding.setHoverEvent(new HoverEvent(action, new ComponentBuilder(value).create()));
+    public TextComponentBuilder setHoverEventText(@NotNull String value) {
+        currentBuilding.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(value)));
         return this;
     }
 
     @NotNull
-    public TextComponentBuilder setHoverEvent(@NotNull HoverEvent.Action action, @NotNull ComponentBuilder value) {
-        currentBuilding.setHoverEvent(new HoverEvent(action, new ComponentBuilder(value).create()));
+    public TextComponentBuilder setHoverEventItem(@NotNull String id, int count, @NotNull ItemTag tag) {
+        currentBuilding.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_ITEM, new Item(id, count, tag)));
         return this;
     }
 
     @NotNull
-    public TextComponentBuilder setHoverEvent(@NotNull HoverEvent.Action action, @NotNull BaseComponent value) {
-        currentBuilding.setHoverEvent(new HoverEvent(action, new ComponentBuilder(value).create()));
+    public TextComponentBuilder setHoverEventEntity(@NotNull String type, @NotNull String id, @NotNull BaseComponent name) {
+        currentBuilding.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_ENTITY, new Entity(type, id, name)));
         return this;
     }
 
