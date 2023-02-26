@@ -12,68 +12,68 @@ import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AdvancedConfig extends YamlConfiguration {
+public class AdvancedYamlConfiguration extends YamlConfiguration {
 
     private final File file;
 
     /**
-     * Creates a SimpleConfiguration from a File.
+     * Creates an AdvancedYamlConfiguration from a File.
      *
      * @param file The file where the configuration is in.
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file) throws IOException, InvalidConfigurationException {
         this.file = file;
         super.load(file);
     }
 
     /**
-     * Creates a SimpleConfiguration from a file as a String.
+     * Creates an AdvancedYamlConfiguration from a file as a String.
      *
      * @param file The file where the configuration is in as a String.
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull String file) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull String file) throws IOException, InvalidConfigurationException {
         this.file = new File(file);
         super.load(file);
     }
 
     /**
-     * Creates a SimpleConfiguration in a File from a Reader.
+     * Creates an AdvancedYamlConfiguration in a File from a Reader.
      *
      * @param file   The File where the configuration is in.
      * @param reader The Reader where the configuration comes from.
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file, @NotNull Reader reader) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file, @NotNull Reader reader) throws IOException, InvalidConfigurationException {
         this.file = file;
         super.load(reader);
     }
 
     /**
-     * Creates a SimpleConfiguration in a File from a String.
+     * Creates an AdvancedYamlConfiguration in a File from a String.
      *
      * @param file     The File where the configuration is in.
      * @param contents The String where the configuration comes from.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file, @NotNull String contents) throws InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file, @NotNull String contents) throws InvalidConfigurationException {
         this.file = file;
         super.loadFromString(contents);
     }
 
     /**
-     * Creates a SimpleConfiguration from a File.
+     * Creates an AdvancedYamlConfiguration from a File.
      *
      * @param file The file where the configuration is in.
      * @param createFile If True creates the config file and the rood directory if not exists.
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file, boolean createFile) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file, boolean createFile) throws IOException, InvalidConfigurationException {
         this.file = file;
         if (createFile) {
             if (!this.file.getParentFile().exists()) this.file.getParentFile().mkdirs();
@@ -83,14 +83,14 @@ public class AdvancedConfig extends YamlConfiguration {
     }
 
     /**
-     * Creates a SimpleConfiguration from a file as a String.
+     * Creates an AdvancedYamlConfiguration from a file as a String.
      *
      * @param file The file where the configuration is in as a String.
      * @param createFile If True creates the config file and the rood directory if not exists.
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull String file, boolean createFile) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull String file, boolean createFile) throws IOException, InvalidConfigurationException {
         this.file = new File(file);
         if (createFile) {
             if (!this.file.getParentFile().exists()) this.file.getParentFile().mkdirs();
@@ -100,7 +100,7 @@ public class AdvancedConfig extends YamlConfiguration {
     }
 
     /**
-     * Creates a SimpleConfiguration in a File from a Reader.
+     * Creates an AdvancedYamlConfiguration in a File from a Reader.
      *
      * @param file   The File where the configuration is in.
      * @param reader The Reader where the configuration comes from.
@@ -108,7 +108,7 @@ public class AdvancedConfig extends YamlConfiguration {
      * @throws IOException                   If there are any errors with the file.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file, @NotNull Reader reader, boolean createFile) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file, @NotNull Reader reader, boolean createFile) throws IOException, InvalidConfigurationException {
         this.file = file;
         if (createFile) {
             if (!this.file.getParentFile().exists()) this.file.getParentFile().mkdirs();
@@ -118,14 +118,14 @@ public class AdvancedConfig extends YamlConfiguration {
     }
 
     /**
-     * Creates a SimpleConfiguration in a File from a String.
+     * Creates an AdvancedYamlConfiguration in a File from a String.
      *
      * @param file     The File where the configuration is in.
      * @param contents The String where the configuration comes from.
      * @param createFile If True creates the config file and the rood directory if not exists.
      * @throws InvalidConfigurationException If the configuration is not in the right format.
      */
-    public AdvancedConfig(@NotNull File file, @NotNull String contents, boolean createFile) throws IOException, InvalidConfigurationException {
+    public AdvancedYamlConfiguration(@NotNull File file, @NotNull String contents, boolean createFile) throws IOException, InvalidConfigurationException {
         this.file = file;
         if (createFile) {
             if (!this.file.getParentFile().exists()) this.file.getParentFile().mkdirs();
