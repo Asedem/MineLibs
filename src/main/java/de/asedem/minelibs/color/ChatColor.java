@@ -6,6 +6,23 @@ import java.awt.*;
 
 public class ChatColor {
 
+    public static final org.bukkit.ChatColor BLACK = org.bukkit.ChatColor.BLACK;
+    public static final org.bukkit.ChatColor DARK_BLUE = org.bukkit.ChatColor.DARK_BLUE;
+    public static final org.bukkit.ChatColor DARK_GREEN = org.bukkit.ChatColor.DARK_GREEN;
+    public static final org.bukkit.ChatColor DARK_AQUA = org.bukkit.ChatColor.DARK_AQUA;
+    public static final org.bukkit.ChatColor DARK_RED = org.bukkit.ChatColor.DARK_RED;
+    public static final org.bukkit.ChatColor DARK_PURPLE = org.bukkit.ChatColor.DARK_PURPLE;
+    public static final org.bukkit.ChatColor GOLD = org.bukkit.ChatColor.GOLD;
+    public static final org.bukkit.ChatColor GRAY = org.bukkit.ChatColor.GRAY;
+    public static final org.bukkit.ChatColor DARK_GRAY = org.bukkit.ChatColor.DARK_GRAY;
+    public static final org.bukkit.ChatColor BLUE = org.bukkit.ChatColor.BLUE;
+    public static final org.bukkit.ChatColor GREEN = org.bukkit.ChatColor.GREEN;
+    public static final org.bukkit.ChatColor AQUA = org.bukkit.ChatColor.AQUA;
+    public static final org.bukkit.ChatColor RED = org.bukkit.ChatColor.RED;
+    public static final org.bukkit.ChatColor LIGHT_PURPLE = org.bukkit.ChatColor.LIGHT_PURPLE;
+    public static final org.bukkit.ChatColor YELLOW = org.bukkit.ChatColor.YELLOW;
+    public static final org.bukkit.ChatColor WHITE = org.bukkit.ChatColor.WHITE;
+
     private ChatColor() {
     }
 
