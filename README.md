@@ -16,7 +16,7 @@
 <dependency>
     <groupId>com.github.Asedem</groupId>
     <artifactId>MineLibs</artifactId>
-    <version>fc5dda2dae</version>
+    <version>cb68351bd4</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.Asedem:MineLibs:fc5dda2dae'
+    implementation 'com.github.Asedem:MineLibs:cb68351bd4'
 }
 ```
 
