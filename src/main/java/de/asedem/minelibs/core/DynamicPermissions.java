@@ -8,6 +8,9 @@ import java.util.List;
 
 public class DynamicPermissions {
 
+    private DynamicPermissions() {
+    }
+
     /**
      * Gives you a list of permissions that the player has, which starts with a specific word
      *

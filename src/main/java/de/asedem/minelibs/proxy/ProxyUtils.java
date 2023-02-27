@@ -5,7 +5,10 @@ import org.bukkit.plugin.Plugin;
 
 public class ProxyUtils {
 
-    public boolean isBungee(Plugin plugin) {
+    public ProxyUtils() {
+    }
+
+    public static boolean isBungee(Plugin plugin) {
         ConfigurationSection settings = plugin.getServer().spigot().getConfig().getConfigurationSection("settings");
         if (settings == null) return false;
         return settings.getBoolean("settings.bungeecord");

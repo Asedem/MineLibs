@@ -290,8 +290,8 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Sets the specified path to the given value.
-     * If value is null, the entry will be removed. Any existing entry will be replaced, regardless of what the new value is.
+     * Sets the specified path to the given value.<br>
+     * If value is null, the entry will be removed. Any existing entry will be replaced, regardless of what the new value is.<br>
      * Some implementations may have limitations on what you may store. See their individual javadocs for details. No implementations should allow you to store Configurations or ConfigurationSections, please use ConfigurationSection.createSection(java.lang.String) for that.
      *
      * @param path  Path of the object to set.
@@ -304,7 +304,7 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Saves this FileConfiguration.
+     * Saves this FileConfiguration.<br>
      * This method will save using the system default encoding, or possibly using UTF8.
      *
      * @throws IOException If the configuration cant be saved in a file.
@@ -314,8 +314,8 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Saves this FileConfiguration to the specified location.
-     * If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown.
+     * Saves this FileConfiguration to the specified location.<br>
+     * If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown.<br>
      * This method will save using the system default encoding, or possibly using UTF8.
      *
      * @param file File to save to.
@@ -329,8 +329,8 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Saves this FileConfiguration to the specified location.
-     * If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown.
+     * Saves this FileConfiguration to the specified location.<br>
+     * If the file does not exist, it will be created. If already exists, it will be overwritten. If it cannot be overwritten or created, an exception will be thrown.<br>
      * This method will save using the system default encoding, or possibly using UTF8.
      *
      * @param file File to save to.
@@ -344,8 +344,8 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Loads this FileConfiguration from the specified location.
-     * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given file.
+     * Loads this FileConfiguration from the specified location.<br>
+     * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given file.<br>
      * If the file cannot be loaded for any reason, an exception will be thrown.
      *
      * @param file File to load from.
@@ -359,8 +359,8 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Loads this FileConfiguration from the specified location.
-     * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given file.
+     * Loads this FileConfiguration from the specified location.<br>
+     * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given file.<br>
      * If the file cannot be loaded for any reason, an exception will be thrown.
      *
      * @param file File to load from.
@@ -374,7 +374,7 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Loads this FileConfiguration from the specified reader.
+     * Loads this FileConfiguration from the specified reader.<br>
      * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given stream.
      *
      * @param reader the reader to load from
@@ -388,7 +388,7 @@ public class AdvancedYamlConfiguration extends YamlConfiguration {
     }
 
     /**
-     * Loads this FileConfiguration from the specified string, as opposed to from file.
+     * Loads this FileConfiguration from the specified string, as opposed to from file.<br>
      * All the values contained within this configuration will be removed, leaving only settings and defaults, and the new values will be loaded from the given string.
      * If the string is invalid in any way, an exception will be thrown.
      *

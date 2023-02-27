@@ -72,7 +72,7 @@ public class PlayerUtils {
     }
 
     /**
-     * Gets the Vector where an Entity is looking to
+     * Gets the Vector where an Entity is looking to<br>
      * (If the entity is a player you get the vector of the eye direction)
      *
      * @param entity The entity to get the vector from

@@ -10,6 +10,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -64,6 +65,10 @@ public class InventoryBuilder {
 
     public InventoryBuilder(@NotNull InventoryHolder owner, int inventorySize, @NotNull String title) {
         currentBuilding = Bukkit.createInventory(owner, inventorySize, title);
+    }
+
+    public static void initClickModule(@NotNull Plugin plugin) {
+        Bukkit.getPluginManager().registerEvents(new InventoryClickListener(), plugin);
     }
 
     @NotNull

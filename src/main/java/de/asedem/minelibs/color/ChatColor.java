@@ -135,7 +135,7 @@ public class ChatColor {
      */
     @NotNull
     private static String getColorsForGradient(@NotNull Color start, @NotNull Color end, int length, int i) {
-        RGB rgb = ColorHandler.getRGBForGradientAtPosition(start, end, length, i);
+        RGB rgb = ChatColor.getRGBForGradientAtPosition(start, end, length, i);
         return toChatColor('#' + String.format("%06X", 0xFFFFFF & new Color(rgb.red(), rgb.green(), rgb.blue()).getRGB()));
     }
 
@@ -151,5 +151,23 @@ public class ChatColor {
         char[] var3 = hexCode.substring(1).toCharArray();
         for (char c : var3) magic.append('§').append(c);
         return magic.toString();
+    }
+
+    /**
+     * Returns the color on a specific point of the sentence
+     *
+     * @param start  The start color
+     * @param end    The end color
+     * @param length The length of the sentence
+     * @param i      The position in the sentence
+     * @return The color on a specific point of the sentence
+     */
+    @NotNull
+    private static RGB getRGBForGradientAtPosition(@NotNull Color start, @NotNull Color end, int length, int i) {
+        return new RGB(
+                start.getRed() + (end.getRed() - start.getRed()) / (length - 1) * i,
+                start.getGreen() + (end.getGreen() - start.getGreen()) / (length - 1) * i,
+                start.getBlue() + (end.getBlue() - start.getBlue()) / (length - 1) * i
+        );
     }
 }
