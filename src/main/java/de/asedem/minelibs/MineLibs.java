@@ -1,5 +1,6 @@
 package de.asedem.minelibs;
 
+import de.asedem.minelibs.event.AsyncPlayerMoveEvent;
 import de.asedem.minelibs.inventory.InventoryBuilder;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
@@ -17,5 +18,18 @@ public class MineLibs {
      */
     public static void initInventoryClickModule(@NotNull Plugin plugin) {
         InventoryBuilder.initClickModule(plugin);
+    }
+
+    /**
+     * Inits the AsyncPlayerMoveModule.<br>
+     * Without this the AsyncPlayerMoveEvent will not work.<br><br>
+     * Alternatively: AsyncPlayerMoveEvent.initModule(plugin)
+     *
+     * @see AsyncPlayerMoveEvent#initModule(Plugin)
+     *
+     * @param plugin The Plugin, where the API is used in.
+     */
+    public static void initAsyncPlayerMoveEventModule(@NotNull Plugin plugin) {
+        AsyncPlayerMoveEvent.initModule(plugin);
     }
 }
