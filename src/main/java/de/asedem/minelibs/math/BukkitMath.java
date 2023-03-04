@@ -1,4 +1,4 @@
-package de.asedem.minelibs.core;
+package de.asedem.minelibs.math;
 
 import org.bukkit.Location;
 import org.bukkit.World;
