@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * A help object to work with polygonal regions in minecraft
+ *
  * @param points the corner points of the polygonal area
  */
 public record Region(
@@ -19,6 +20,7 @@ public record Region(
 
     /**
      * Initialize a new Region without minding about the constructing parameters
+     *
      * @return a new Region with an empty List of points
      */
     @NotNull
@@ -28,6 +30,7 @@ public record Region(
 
     /**
      * Converts a Bukkit location to a Point from java.awt
+     *
      * @param location the Bukkit location
      * @return the Point from the java.awt package
      */
@@ -38,6 +41,7 @@ public record Region(
 
     /**
      * Converts the given list of Points to a Polygon
+     *
      * @return the Polygon that is calculated
      */
     @NotNull
@@ -49,6 +53,7 @@ public record Region(
 
     /**
      * Should give the blocks, that the Region contains
+     *
      * @return the amount of blocks in the area
      */
     public int area() {
@@ -66,6 +71,7 @@ public record Region(
 
     /**
      * Should give the Vectors to the next point
+     *
      * @param heightVariation The height variation of the Vector
      * @return the vector
      */
@@ -85,6 +91,7 @@ public record Region(
 
     /**
      * Checks if the value is invalid
+     *
      * @return true if the value is invalid
      */
     public boolean invalid() {
