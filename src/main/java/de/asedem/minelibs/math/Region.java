@@ -66,7 +66,8 @@ public record Region(
             sum -= polygon.ypoints[i] * polygon.xpoints[j];
         }
         sum /= 2.0D;
-        return (int) (sum + 0.5D);
+        final int result = (int) (sum + 0.5D);
+        return result > 0 ? result : (result * -1) + 1;
     }
 
     /**
@@ -76,7 +77,7 @@ public record Region(
      * @return the vector
      */
     @Nullable
-    public List<Vector> vectorize(int heightVariation) {
+    public List<Vector> vectorized(int heightVariation) {
         if (this.invalid()) return null;
         final List<Vector> vectors = new ArrayList<>();
         for (int i = 0; i < this.points().size(); i++) {
