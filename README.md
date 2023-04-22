@@ -6,7 +6,13 @@ MineLibs is not for everyone. The library contains many functions that are exact
 
 Many functions that I don't cover can be found in <a href="https://git.rytrox.de/shared/Spicy">Spicy</a>. MineLibs should best serve as an extension to <a href="https://git.rytrox.de/shared/Spicy">Spicy</a>.
 
-<hr>
+<hr><br>
+
+# This Project will be discontinued
+
+The API is a bit to full. It will be split in different tinier projects. The Projects will be linked here in the future. For now, you have to use the MineLibs or copy the code from my classes to your project. It's free for use :D
+
+<br>
 
 ## Installation
 
@@ -57,4 +63,4 @@ dependencies {
 - BungeeMessageChannel
 - ProxyUtils
 - Updater
-- ReverseMap
+- ReverseMap (This structure provides massive bugs)
