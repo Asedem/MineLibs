@@ -10,7 +10,7 @@ Many functions that I don't cover can be found in <a href="https://git.rytrox.de
 
 # This Project will be discontinued
 
-The API is a bit to full. It will be split in different tinier projects. The Projects will be linked here in the future. For now, you have to use the MineLibs or copy the code from my classes to your project. It's free for use :D
+The API is a bit too full. It will be split into several smaller projects that I will publish under the <a href="https://github.com/XyloCraft">XyloCraft</a> organization. The projects will be linked here in the future. For now, you have to use MineLibs or copy the code from my classes into your project. The usage is free :D
 
 <br>
 
